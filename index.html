@@ -71,6 +71,41 @@ nav a:hover::after{
   width:100%;
   left:0;
 }
+.tiket-box{
+  max-width:420px;
+  margin:30px auto;
+  padding:22px;
+  text-align:center;
+  background:rgba(229,225,218,0.75); /* #E5E1DA */
+  backdrop-filter:blur(6px);
+  border-radius:22px;
+  box-shadow:0 15px 35px rgba(140,120,100,0.35);
+}
+
+.tiket-text{
+  margin:0 0 14px;
+  font-size:18px;
+  color:#6b5a4d;
+  font-weight:600;
+}
+
+.btn-tiket{
+  display:inline-block;
+  padding:14px 32px;
+  background:linear-gradient(135deg, #B08968, #8D6E63);
+  color:#ffffff;
+  text-decoration:none;
+  font-weight:600;
+  border-radius:30px;
+  box-shadow:0 10px 25px rgba(141,110,99,0.55);
+  transition:0.3s;
+}
+
+.btn-tiket:hover{
+  transform:translateY(-3px);
+  box-shadow:0 18px 35px rgba(141,110,99,0.8);
+}
+
 
 /* ================= HERO ================= */
 .hero{
@@ -79,9 +114,19 @@ nav a:hover::after{
   grid-template-columns:1.2fr 1fr;
   background:
     linear-gradient(rgba(247,243,239,.85),rgba(247,243,239,.85)),
-    url("file:///C:/Users/PC%201/Downloads/gambar%20background.jpg");
+    src("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh5nzeq3kvnZTIEJxZY7zVBtUlTZ5hzgIMNWW2ai7ZnZOSeu6UMiw-6Ob3RytRvJQ2TF2mkL3_1OpBpWuXw4by9ItFx0QLmU829hwsINezznrttSH_3ED5kI7qGRw_BoZv_Hx9coJXWAOxPJ8rXGNUA6ahXI0VgXkJuvvyFnR5Jyo-G8Xv7_eBp8zS5Fo8/s3984/IMG_20240919_085832%20(1).jpg");
   background-size:cover;
   background-position:center;
+}
+
+.tiket-wrap{
+  text-align:center;
+  margin:25px 0;
+}
+
+.tiket-wrap{
+  text-align:center;
+  margin:25px 0;
 }
 
 .hero-left{
@@ -119,6 +164,7 @@ nav a:hover::after{
 .hero-right i{
   margin-top:20px;
   opacity:.7;
+  
 }
 
 @keyframes fadeUp{
@@ -316,6 +362,35 @@ p{
   margin-bottom:16px;
 }
 
+.team-card{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  padding:40px 25px;
+  transition:0.3s;
+}
+
+.team-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 30px 60px rgba(75,63,53,.1);
+}
+
+.team-card img{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  object-fit:cover;
+  margin:0 auto 25px;
+  display:block;
+  }
+  .team-center{
+  grid-column:1 / -1;
+  justify-self:center;
+  max-width:260px;
+}
+
+
 /* ================= FOOTER ================= */
 footer{
   padding:80px 8%;
@@ -323,6 +398,40 @@ footer{
   font-size:14px;
   opacity:.7;
 }
+.galeri-box{
+  max-width:420px;
+  margin:20px auto;
+  padding:20px;
+  text-align:center;
+  background:rgba(229,225,218,0.8); /* #E5E1DA */
+  border-radius:22px;
+  box-shadow:0 12px 30px rgba(140,120,100,0.35);
+}
+
+.galeri-text{
+  margin:0 0 12px;
+  font-size:17px;
+  color:#6b5a4d;
+  font-weight:600;
+}
+
+.btn-galeri{
+  display:inline-block;
+  padding:13px 30px;
+  background:linear-gradient(135deg, #C7A17A, #A07855);
+  color:#ffffff;
+  text-decoration:none;
+  font-weight:600;
+  border-radius:30px;
+  box-shadow:0 8px 22px rgba(160,120,85,0.55);
+  transition:0.3s;
+}
+
+.btn-galeri:hover{
+  transform:translateY(-3px);
+  box-shadow:0 14px 30px rgba(160,120,85,0.8);
+}
+
 
 /* ================= RESPONSIVE ================= */
 @media(max-width:900px){
@@ -355,6 +464,16 @@ footer{
   <div class="hero-right">
     <h1><span>DESA</span><br>KAYU KEBEK</h1>
     <i>“Mari singgah sejenak, biarkan hati bernapas.”</i>
+  <div class="tiket-box">
+  <p class="tiket-text">🎟️ Sudah siap mampir?</p>
+  <a href=" https://abizartempe11-cloud.github.io/booking-tiket/" target="_blank" class="btn-tiket">
+    Pesan Tiket Sekarang
+  </a>
+</div>
+
+  </a>
+</div>
+
   </div>
 </section>
 
@@ -455,7 +574,7 @@ footer{
 <!-- TEAM -->
 <section id="team">
   <h2>Our Team</h2>
-  <p><i>Empat langkah kecil untuk satu tujuan besar.</i></p>
+  <p><i>Lima langkah kecil untuk satu tujuan besar.</i></p>
 
   <div class="team-grid">
     <div class="team-card">
@@ -467,23 +586,33 @@ footer{
       <h4>Mohammad Abizar Ramadhan</h4>
     </div>
     <div class="team-card">
-      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEijBxeHYDONIS5r42l_6zop0EQQQTRWuA6KxPQoPCelcHOsUlt5nmc3ldR-acEQ2ZbYBqCe67SR9WmxMua7q4uQoAqEh7CjiR3gkfIDvcvNUtLu8nskJbHGfv1p3i-TgWN1VieP54uEg3G_zyn09_YWhvSVCehAhEiVq8oDSyD5xMpJSL3gs7xjP7RMRnA/s177/apip.jpeg">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjriE8YvJe1pQAJwcM1sbPcZNmACg_9fh6w_tkTdmF6v7QzRdwr25XjlfKcxLKer4nn5XoXQnnKMqykt9gU7dIXLmqdpk372ShLpPJ2b1_OcraF0qOhGWIxxGRqO8axY-tURomPpc2Sn1kFPyrE-3u0OOh9hcwQeQ9QMovsGhhyI_MkwmetgHMjm6FBZo8/s640/wahyuuu.jpg">
       <h4>M. Nur Afif Ali Maghribi</h4>
     </div>
     <div class="team-card">
-      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjriE8YvJe1pQAJwcM1sbPcZNmACg_9fh6w_tkTdmF6v7QzRdwr25XjlfKcxLKer4nn5XoXQnnKMqykt9gU7dIXLmqdpk372ShLpPJ2b1_OcraF0qOhGWIxxGRqO8axY-tURomPpc2Sn1kFPyrE-3u0OOh9hcwQeQ9QMovsGhhyI_MkwmetgHMjm6FBZo8/s640/wahyuuu.jpg">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEijBxeHYDONIS5r42l_6zop0EQQQTRWuA6KxPQoPCelcHOsUlt5nmc3ldR-acEQ2ZbYBqCe67SR9WmxMua7q4uQoAqEh7CjiR3gkfIDvcvNUtLu8nskJbHGfv1p3i-TgWN1VieP54uEg3G_zyn09_YWhvSVCehAhEiVq8oDSyD5xMpJSL3gs7xjP7RMRnA/s177/apip.jpeg">
       <h4>Wahyu Ramadhani</h4>
     </div>
+	<<div class="team-card team-center">
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhy1XtD8FcpXderYQtylhqId3jJ0W0OiHcATvBv02p5q0HXRPM4HBcsRbxIMyLBAKMVcut5qdU4rC0LQ8-mILWcVLSFDZkBvzwOFU_YnN_YiwxbEAjDS5WiN-CDDP-LrZnMLOvcEaoc_Fmdwk1OgxVcanwtjUicikmH24xIVGlYY2AonMK9e5QITT16G-s/s216/dontol.jpg">
+  <h4>Daniswara Raisha Santana.S</h4>
+</div>
+
   </div>
 </section>
 
+<div class="galeri-box">
+  <p class="galeri-text">🖼️ Lihat project kami</p>
+  <a href=" https://abizartempe11-cloud.github.io/pengumpulan/" class="btn-galeri">
+    Masuk Galeri
+  </a>
+</div>
+
 <footer>
-  “Di Kayu Kebek, waktu tidak berlari, ia berjalan menemani langkahmu.”  
+  “LESTARINE DESA LANGGENGE BUDAYA KEARIFAN LOKAL ING PANGKUANING ALAM”  
   <br><br>
-  © 2026 Tim UKK Kelompok
+  © 2026 Tim UKK Kelompok segawon
 </footer>
 
 </body>
 </html>
-
-
